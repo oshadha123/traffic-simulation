@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  traffic-sim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: traffic-simulation
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - traffic-network
+
+  # Optional: Add development service
+  traffic-sim-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: traffic-simulation-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev -- --host
+    networks:
+      - traffic-network
+    profiles:
+      - development
+
+networks:
+  traffic-network:
+    driver: bridge
