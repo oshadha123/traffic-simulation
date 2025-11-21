@@ -1,12 +1,11 @@
 # 🚦 Advanced Traffic Flow Simulation
 
-A sophisticated traffic simulation system implementing graph algorithms (Dijkstra, A*) with real-time visualization, traffic light optimization, and comprehensive statistics.
+A sophisticated traffic simulation system implementing graph algorithms (Dijkstra) with real-time visualization, traffic light optimization, and comprehensive statistics.
 
 ## 🎯 Features
 
 ### Core Algorithms
 - **Dijkstra's Algorithm**: Shortest path calculation for optimal routing
-- **A* Pathfinding**: Heuristic-based pathfinding with performance optimization
 - **Traffic Flow Optimization**: Dynamic speed adjustment based on congestion
 - **Collision Avoidance**: Real-time proximity detection and speed modulation
 - **Traffic Light Synchronization**: Smart traffic signal timing
@@ -83,8 +82,6 @@ npm run dev
 # Build for production
 npm run build
 
-# Preview production build
-npm run preview
 ```
 
 ## 📊 Algorithm Implementation Details
@@ -96,25 +93,18 @@ Space Complexity: O(V)
 ```
 Used for calculating shortest paths between intersection nodes in the road network.
 
-### 2. A* Algorithm
-```
-Time Complexity: O(b^d) where b is branching factor, d is depth
-Space Complexity: O(b^d)
-```
-Heuristic-based pathfinding using Euclidean distance for improved performance.
-
-### 3. Graph Structure
+### 2. Graph Structure
 - **Nodes**: Intersection points with traffic lights
 - **Edges**: Road segments with weight/distance
 - **Dynamic weights**: Adjusted based on real-time traffic conditions
 
-### 4. Traffic Light Optimization
+### 3. Traffic Light Optimization
 - Green/Red cycle timing
 - Vehicle detection at intersections
 - Queue management
 - Throughput maximization
 
-### 5. Collision Avoidance
+### 4. Collision Avoidance
 - Proximity-based speed reduction
 - Minimum safe distance enforcement
 - Dynamic acceleration/deceleration
@@ -137,14 +127,6 @@ The simulation tracks:
 - **Congestion Level**: Percentage of waiting vehicles
 - **Throughput**: Number of completed journeys
 - **Total Distance**: Cumulative distance traveled
-
-## 🎨 UI Features
-
-- Modern dark theme with gradient accents
-- Responsive controls panel
-- Real-time statistics dashboard
-- Interactive canvas visualization
-- Adjustable simulation parameters
 
 ## 🔧 Configuration
 
@@ -172,31 +154,6 @@ traffic-simulation/
 └── README.md
 ```
 
-## 🚀 Deployment
-
-### Production Build
-```bash
-npm run build
-```
-
-### Deploy with Docker
-```bash
-docker build -t traffic-sim .
-docker run -p 3000:80 traffic-sim
-```
-
-## 👥 Team Contribution Guidelines
-
-Document each member's contribution:
-- Algorithm implementation (Dijkstra, A*)
-- UI/UX design & visualization
-- Docker configuration & deployment
-- Testing, optimization & documentation
-
-## 📝 License
-
-MIT License - Feel free to use for educational purposes.
-
 ## 🎓 Course Work Submission
 
 This project fulfills the requirements for:
@@ -204,7 +161,7 @@ This project fulfills the requirements for:
 - **Topic**: Graphs (Traffic Simulation)
 - **Features**: 
   - ✅ Graph-based road network
-  - ✅ Dijkstra's & A* algorithm implementation
+  - ✅ Dijkstra's algorithm implementation
   - ✅ Real-time visualization
   - ✅ Docker containerization
   - ✅ Comprehensive documentation
