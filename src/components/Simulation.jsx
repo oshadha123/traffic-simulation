@@ -67,7 +67,7 @@ const Simulation = () => {
       { id: 25, x: 710, y: 590, type: 'intersection', name: 'Bay' }
     ];
 
-    // Complex road network with varying weights (distances and traffic)
+    // Road network with varying weights (distances and traffic)
     edgesRef.current = [
       // Top horizontal connections
       { from: 0, to: 1, weight: 1.2 },
@@ -530,7 +530,7 @@ const Simulation = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-6">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Complex City Traffic Simulation
+            City Traffic Simulation
           </h1>
           <p className="text-gray-400 text-sm md:text-base">
             26-node urban network with Dijkstra's algorithm • Real-time pathfinding & optimization
@@ -666,7 +666,7 @@ const Simulation = () => {
               <ul className="text-xs md:text-sm space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-0.5">✓</span>
-                  <span>Complex 26-node city network</span>
+                  <span>26-node city network</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-0.5">✓</span>
